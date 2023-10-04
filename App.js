@@ -12,7 +12,7 @@ import ShareListScreen from './ShareListScreen';
 // Opretter en staknavigator ved hjælp af 'createStackNavigator' fra 'react-navigation'
 const Stack = createStackNavigator();
 // Denne komponent 'App' fungerer som rodkomponenten for min React Native-app
-//Ny COMMENT
+//Ny COMMENT akljgnadjkgsngsdn
 export default function App() {
   return (
     <NavigationContainer>
