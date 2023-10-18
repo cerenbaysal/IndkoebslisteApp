@@ -3,16 +3,17 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 // Importerer de forskellige skærme fra de separate komponentfiler
-import HomeScreen from './HomeScreen';
-import ShoppingListScreen from './ShoppingListScreen';
-import AddItemScreen from './AddItemScreen';
-import CategoryManagerScreen from './CategoryManagerScreen';
-import ShareListScreen from './ShareListScreen';
+import HomeScreen from './components/HomeScreen';
+import ShoppingListScreen from './components/ShoppingListScreen';
+import AddItemScreen from './components/AddItemScreen';
+import CategoryManagerScreen from './components/CategoryManagerScreen';
+import ShareListScreen from './components/ShareListScreen';
+import CategorySelectionScreen from './components/CategorySelectionScreen';
+
 
 // Opretter en staknavigator ved hjælp af 'createStackNavigator' fra 'react-navigation'
 const Stack = createStackNavigator();
-// Denne komponent 'App' fungerer som rodkomponenten for min React Native-app
-//Ny COMMENT akljgnadjkgsngsdn
+//  'App' fungerer som rodkomponenten for min React Native-app
 export default function App() {
   return (
     <NavigationContainer>
@@ -22,6 +23,8 @@ export default function App() {
         <Stack.Screen name="AddItem" component={AddItemScreen} />
         <Stack.Screen name='CategoryManager' component={CategoryManagerScreen} />
         <Stack.Screen name='ShareList' component={ShareListScreen} />
+        <Stack.Screen name='CategorySelection' component={CategorySelectionScreen} />
+       
       </Stack.Navigator>
     </NavigationContainer>
   );

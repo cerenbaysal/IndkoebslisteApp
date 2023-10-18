@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
+import styles from '../styles/ShareListScreenStyle';
 // ShareListScreen-komponenten viser en liste over delte indkøbslister
 export default function ShareListScreen() {
-    // Liste over delte indkøbslister med id og navn
+  // En liste af delte indkøbslister med unikke id'er og navne
   const sharedLists = [
     { id: 1, name: 'Indkøbsliste til fest' },
     { id: 2, name: 'Familieindkøb' },
@@ -10,6 +11,7 @@ export default function ShareListScreen() {
   ];
 
   return (
+    // Hovedcontaineren for skærmbilledet med styling fra 'ShareListScreenStyle'
     <View style={styles.container}>
       <Text style={styles.title}>Delte Indkøbslister</Text>
       <FlatList
@@ -22,17 +24,17 @@ export default function ShareListScreen() {
               <Button
                 title="Se detaljer"
                 onPress={() => {}}
-                color="blue" // Blå farve
+                color={styles.button.color}
               />
               <Button
                 title="Del"
                 onPress={() => {}}
-                color="#4CD964" // Grøn farve
+                color="#4CD964"
               />
               <Button
                 title="Slet"
                 onPress={() => {}}
-                color="#FF3B30" // Rød farve
+                color="#FF3B30"
               />
             </View>
           </View>
@@ -41,32 +43,3 @@ export default function ShareListScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: 'beige', 
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    color: '#333333', 
-  },
-  sharedList: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    paddingVertical: 8,
-  },
-  sharedListName: {
-    fontSize: 18,
-    color: '#333333', 
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-  },
-});
